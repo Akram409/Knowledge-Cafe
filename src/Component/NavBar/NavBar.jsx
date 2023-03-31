@@ -1,4 +1,5 @@
 import React from "react";
+import './NavBar.css'
 
 const NavBar = () => {
   return (
@@ -11,7 +12,7 @@ const NavBar = () => {
         </div>
         <div className="flex-none gap-2">
         <div>
-          <ul className="flex gap-10 me-9 text-black text-xl list-none font-bold">
+          <ul className="flex gap-10 me-9 text-black text-xl list-none font-bold NavBar-ul">
             <li>Home</li>
             <li>About</li>
             <li>Contact</li>
