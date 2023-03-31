@@ -1,0 +1,12 @@
+.RecordBox {
+  color: #6047ec;
+  background: rgba(96, 71, 236, 0.1);
+  border: 1px solid #6047ec;
+  border-radius: 8px;
+  padding: 21px 40px;
+}
+
+.RecordBookMark {
+  background: rgba(17, 17, 17, 0.05);
+  border-radius: 8px;
+}
