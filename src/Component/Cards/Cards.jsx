@@ -1,7 +1,6 @@
 import "./Cards.css";
 
 const Cards = (props) => {
-  // console.log(props.blog)
   const {
     id,
     Author_name,
@@ -19,7 +18,7 @@ const Cards = (props) => {
         <figure>
           <img src={Images} alt="Shoes" />
         </figure>
-        <div className="card-body">
+        <div className="card-body px-3">
           <div className="flex justify-between items-center">
             <div className="flex justify-center items-center gap-5">
               <div className="avatar">
@@ -52,8 +51,10 @@ const Cards = (props) => {
               </span>
             </div>
           </div>
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
+          <div className="px-3">
+            <h1 className="text-3xl font-bold my-5">{Blog_title}</h1>
+            <p className="font-medium pb-5">{Tag}</p>
+            <a className="link link-info">Mark as read</a>
           </div>
         </div>
       </div>
