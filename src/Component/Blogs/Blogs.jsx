@@ -36,7 +36,7 @@ const Blogs = () => {
     setMark(newMark);
   };
   return (
-    <div className="blogs container mx-auto mt-10 grid sm:grid-cols-1 md:grid-cols-2">
+    <div className="grid grid-cols-1 md:grid-cols-2 blogs container mx-auto mt-10 ">
       <div>
         {blogs.map((blog) => (
           <Cards

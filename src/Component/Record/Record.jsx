@@ -9,14 +9,14 @@ const Record = (props) => {
   }
 
   return (
-      <div className="">
+    <>
       <div className="m-5">
         <div className="RecordBox">
           <h1 className="text-xl font-bold">Spent time on read : {time} min</h1>
         </div>
         <Bookmark mark={props.mark}></Bookmark>
       </div>
-    </div>
+    </>
   );
 };
 

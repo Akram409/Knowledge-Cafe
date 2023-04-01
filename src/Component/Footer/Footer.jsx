@@ -4,25 +4,53 @@ const Footer = () => {
   return (
     <div className="mt-8">
       <footer className="footer footer-center p-10 text-base-content rounded bg-black">
-      <div>
-            <h1 className="text-white font-bold text-3xl">- - - BLOGS QNA - - -</h1>
+        <div>
+          <h1 className="text-white font-bold text-3xl">
+            - - - BLOGS QNA - - -
+          </h1>
         </div>
-        <div className="grid grid-flow-col gap-4 text-white">
-          <div className="border border-white p-2 h-56">
+        <div className="footer gap-5 md:gap-4 text-white">
+          <div className="border border-white p-3">
             <h1 className="font-bold text-xl">Define Props vs state</h1>
-            <p><strong>ANS:</strong> In React, props are read-only data passed from a parent component to a child component, while state is mutable data managed within a component that can be changed by the component itself.</p>
+            <p>
+              <strong>ANS:</strong> In React, props are read-only data passed
+              from a parent component to a child component, while state is
+              mutable data managed within a component that can be changed by the
+              component itself.
+            </p>
           </div>
-          <div className="border border-white p-2 h-56">
+          <div className="border border-white p-3">
             <h1 className="font-bold text-xl">How does useState work?</h1>
-            <p><strong>ANS:</strong> useState is a hook in React that allows functional components to have stateful logic. It takes an initial value as an argument and returns an array with two elements: the current state value and a function to update the state. When the state is updated using this function, the component re-renders with the new state value.</p>
+            <p>
+              <strong>ANS:</strong> useState is a hook in React that allows
+              functional components to have stateful logic. It takes an initial
+              value as an argument and returns an array with two elements: the
+              current state value and a function to update the state. When the
+              state is updated using this function, the component re-renders
+              with the new state value.
+            </p>
           </div>
-          <div className="border border-white p-2 h-56">
-            <h1 className="font-bold text-xl">Purpose of useEffect other than fetching data.</h1>
-            <p><strong>ANS:</strong> useEffect is primarily used to manage side effects in functional components, such as modifying the DOM or interacting with external APIs. It can also be used for subscribing to events, managing timers, animating component transitions, and updating document metadata, among other things.</p>
+          <div className="border border-white p-3 ">
+            <h1 className="font-bold text-xl">
+              Purpose of useEffect other than fetching data.
+            </h1>
+            <p className="">
+              <strong>ANS:</strong> useEffect is primarily used to manage side
+              effects in functional components, such as modifying the DOM or
+              interacting with external APIs. It can also be used for
+              subscribing to events, managing timers, animating component
+              transitions, and updating document metadata, among other things.
+            </p>
           </div>
-          <div className="border border-white p-2 h-56">
+          <div className="border border-white p-3">
             <h1 className="font-bold text-xl">How Does React work?</h1>
-            <p><strong>ANS:</strong> React creates a virtual representation of the UI called the virtual DOM, which is updated efficiently instead of updating the actual DOM directly. It uses a unidirectional data flow and components with internal state to manage the UI and application logic.</p>
+            <p>
+              <strong>ANS:</strong> React creates a virtual representation of
+              the UI called the virtual DOM, which is updated efficiently
+              instead of updating the actual DOM directly. It uses a
+              unidirectional data flow and components with internal state to
+              manage the UI and application logic.
+            </p>
           </div>
         </div>
         <div>

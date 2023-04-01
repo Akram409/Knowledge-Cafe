@@ -1,23 +1,23 @@
 import React from "react";
-import './NavBar.css'
+import "./NavBar.css";
 
 const NavBar = () => {
   return (
-    <div>
-      <div className="navbar bg-base-100">
+    <>
+      <div className="navbar bg-base-100 flex-col md:flex-row">
         <div className="flex-1">
           <a className="btn btn-ghost normal-case text-2xl font-bold">
             Knowledge Cafe
           </a>
         </div>
         <div className="flex-none gap-2">
-        <div>
-          <ul className="flex gap-10 me-9 text-black text-xl list-none font-bold NavBar-ul">
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact</li>
-          </ul>
-        </div>
+          <div className="hidden md:contents">
+            <ul className="flex gap-10 me-9 text-black text-xl list-none font-bold NavBar-ul">
+              <li>Home</li>
+              <li>About</li>
+              <li>Contact</li>
+            </ul>
+          </div>
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
@@ -44,7 +44,7 @@ const NavBar = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

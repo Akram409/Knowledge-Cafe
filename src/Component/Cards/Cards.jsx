@@ -21,8 +21,8 @@ const Cards = (props) => {
           <img src={Images} alt="Shoes" />
         </figure>
         <div className="card-body px-3">
-          <div className="flex justify-between items-center">
-            <div className="flex justify-center items-center gap-5">
+          <div className="flex justify-between items-center sm:flex-row">
+            <div className="flex justify-center items-center gap-5 sm:flex-row">
               <div className="avatar">
                 <div className="w-24 rounded-full">
                   <img src={Author_image} />
