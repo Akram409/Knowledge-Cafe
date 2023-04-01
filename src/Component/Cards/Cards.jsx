@@ -12,8 +12,8 @@ const Cards = (props) => {
     Tag,
   } = props.blog;
 
-  const MarkRead = props.MarkRead
-  const BookMark = props.BookMark
+  const MarkRead = props.MarkRead;
+  const BookMark = props.BookMark;
   return (
     <>
       <div className="card w-full bg-base-100 shadow-2xl mb-10">
@@ -35,7 +35,7 @@ const Cards = (props) => {
             </div>
             <div className="flex gap-3">
               <p>{Read_time} min read</p>
-              <span onClick={() => BookMark(props.blog)}>
+              <span className="icon" onClick={() => BookMark(props.blog)}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -56,7 +56,9 @@ const Cards = (props) => {
           <div className="px-3">
             <h1 className="text-3xl font-bold my-5">{Blog_title}</h1>
             <p className="font-medium pb-5">{Tag}</p>
-            <a onClick={() => MarkRead(props.blog)} className="link link-info">Mark as read</a>
+            <a onClick={() => MarkRead(props.blog)} className="link link-info">
+              Mark as read
+            </a>
           </div>
         </div>
       </div>

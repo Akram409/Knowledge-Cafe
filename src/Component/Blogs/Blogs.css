@@ -1,5 +1,10 @@
-.blogs{
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    gap: 20px;
+.blogs {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 20px;
+}
+
+.box {
+  background: rgba(17, 17, 17, 0.05);
+  border-radius: 8px;
 }

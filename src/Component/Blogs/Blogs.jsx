@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Cards from "../Cards/Cards";
 import "./Blogs.css";
 import Record from "../Record/Record";
+import { toast } from "react-toastify";
 
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
@@ -24,31 +25,18 @@ const Blogs = () => {
   };
 
   const BookMark = (marks) => {
-    const { id } = marks;
-    // console.log(marks.id)
-    const previousBookmark = JSON.parse(localStorage.getItem("bookmark"));
-    let bookmark = [];
-    const Marks = { id, Mark: true };
-    if (previousBookmark) {
-      const isThisProductMarked = previousBookmark.find(
-        (pd) => pd.id == marks.id
-      );
-      if (isThisProductMarked) {
-        console.log("No do that!!");
-      } else {
-        bookmark.push(...previousBookmark, Marks);
-        localStorage.setItem("bookmark", JSON.stringify(bookmark));
-      }
+    let newMark = [];
+    const check = mark.find((pd) => pd.id === marks.id);
+    if (check) {
+      toast.warn("This blog post is already bookmarked!");
     } else {
-      bookmark.push(Marks);
-      localStorage.setItem("bookmark", JSON.stringify(bookmark));
+      toast.success("Blog post bookmarked successfully!");
     }
-    // let newMark = [];
-    // newMark = [...mark, marks];
-    // setMark(newMark);
+    newMark = [...mark, marks];
+    setMark(newMark);
   };
   return (
-    <div className="blogs container mx-auto mt-10">
+    <div className="blogs container mx-auto mt-10 grid sm:grid-cols-1 md:grid-cols-2">
       <div>
         {blogs.map((blog) => (
           <Cards
@@ -59,9 +47,8 @@ const Blogs = () => {
           ></Cards>
         ))}
       </div>
-      <div className="border border-red-600">
-        {/* <Record item={items} mark={mark}></Record> */}
-        <Record item={items}></Record>
+      <div className="box">
+        <Record item={items} mark={mark}></Record>
       </div>
     </div>
   );
