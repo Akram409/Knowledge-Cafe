@@ -7,9 +7,6 @@ const Blogs = () => {
     const [blogs,setBlogs] = useState([])
     const [items,setItems] = useState([])
 
-    // useEffect(() =>{
-
-    // },[])
     useEffect(() => {
         const loadData = async() => {
             const res = await fetch('Blog.json')
@@ -20,10 +17,13 @@ const Blogs = () => {
     },[])
 
     const MarkRead = (item) =>{
-        const newItem = [...items,item]
-        // console.log(newItem)
+        let newItem = []
+         newItem = [...items,item]
         setItems(newItem)
       }
+    const BookMark = (command) =>{
+        
+    }
     return (
         <div className='blogs container mx-auto mt-10'>
             <div>
@@ -37,7 +37,6 @@ const Blogs = () => {
             </div>
             <div className='border border-red-600'>
                 <Record item={items}></Record>
-
             </div>
         </div>
     );
